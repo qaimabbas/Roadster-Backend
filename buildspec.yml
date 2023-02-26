@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Starting FastAPI build"
+  build:
+    commands:
+      - pip install -r requirements.txt
+  post_build:
+    commands:
+      - echo "FastAPI build complete"
+
+artifacts:
+  files:
+    - '**/*'
